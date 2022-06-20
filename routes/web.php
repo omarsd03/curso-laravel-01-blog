@@ -15,7 +15,7 @@ use App\Http\Controllers\CursoController;
 |
 */
 
-Route::get('/', HomeController::class);
+Route::get('/', HomeController::class)->name('home');
 
 // Grupos de Rutas en Laravel 9
 // Route::controller(CursoController::class)->group(function() {
@@ -46,3 +46,5 @@ Route::resource('cursos', CursoController::class);
  *  variables que se envian a los metodos de las rutas 
 **/
 // Route::resource('asignaturas', CursoController::class)->parameters(['asignaturas' => 'curso'])->names('cursos');
+
+Route::view('nosotros', 'nosotros')->name('nosotros');
